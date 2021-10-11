@@ -1,0 +1,11 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.bg-color {
+  background-color: #8d2d00;
+}
+
+h3 {
+  color: red;
+}
