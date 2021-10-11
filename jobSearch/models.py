@@ -10,13 +10,18 @@ class Users(models.Model):
     password = models.CharField(max_length=200)
     address = models.TextField()
     city = models.CharField(max_length=100)
+    state = models.CharField(max_length=200)
+    country = models.CharField(max_length=200)
     phone_number = models.IntegerField()
     resume = models.FilePathField(path='user_resumes')
+    profile_pic = models.ImageField(upload_to='user_profiles', default='null')
 
 
 class Company(models.Model):
     c_name = models.CharField(max_length=200)
     c_address = models.CharField(max_length=200)
+    c_city = models.CharField(max_length=200)
+    c_state = models.CharField(max_length=200)
     c_email = models.EmailField(max_length=100)
     c_country = models.CharField(max_length=200)
     c_type = models.CharField(max_length=200)
