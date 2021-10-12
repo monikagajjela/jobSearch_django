@@ -3,3 +3,7 @@
 /django_prac/__pycache__/settings.cpython-36.pyc
 /jobSearch/__pycache__/models.cpython-36.pyc
 /jobSearch/__pycache__/urls.cpython-36.pyc
+/django_prac/__pycache__/*
+/jobSearch/__pycache__/*
+/jobSearch/migrations/__pycache__/*
+/jobSearch/migrations/*
