@@ -38,8 +38,37 @@
                                     </nav>
                                 </div>
                                 <!-- Header-btn -->
-                                <div class="header-btn d-none f-right d-lg-block">
-                                    <ul>
+                                <div class="header-btn d-none f-right d-lg-flex">
+                                    <!-- <a href="#" class="btn head-btn1">Register</a>
+                                    <a href="#" class="btn head-btn2">Login</a>
+                                </div> -->
+
+                                    <div class="dropdown show">
+                                        <a class="btn head-btn1 dropdown-toggle" href="#" role="button" id="registerBtn"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Register
+                                        </a>
+
+                                        <div class="dropdown-menu" aria-labelledby="registerBtn">
+                                            <a class="dropdown-item" href="{% url 'userRegister' %}">Employer</a>
+                                            <a class="dropdown-item" href="{% url 'userRegister' %}">Job
+                                                Seeker</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown show">
+                                        <a class="btn head-btn1 dropdown-toggle" href="#" role="button" id="loginBtn"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Login
+                                        </a>
+
+                                        <div class="dropdown-menu" aria-labelledby="loginBtn">
+                                            <a class="dropdown-item" href="{% url '' %}">Employer</a>
+                                            <a class="dropdown-item" href="#">Job Seeker</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--  <ul>
                                         <li><a href="#" class="btn head-btn1">Register</a>
                                             <ul class="submenu">
                                                 <li><a href="blog.html">Blog</a></li>
@@ -51,8 +80,7 @@
                                         <li>
                                             <a href="#" class="btn head-btn2">Login</a>
                                         </li>
-                                    </ul>
-                                </div>
+                                    </ul> -->
                             </div>
                         </div>
                         <!-- Mobile Menu -->
