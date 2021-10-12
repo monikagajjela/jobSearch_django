@@ -9,5 +9,7 @@ urlpatterns = [
     path('contact', auth_views.contact, name='contact'),
     path('userRegister', auth_views.userRegister, name='userRegister'),
     path('employeeReg', auth_views.employeeReg, name='employeeReg'),
+    path('elogin', auth_views.employeeLogin, name='elogin'),
+    path('ulogin', auth_views.userLogin, name='ulogin'),
 
 ]

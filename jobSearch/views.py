@@ -25,8 +25,16 @@ def joblisting(request):
 
 
 def employeeReg(request):
-    return render(request, 'EmployeeReg.html')
+    return render(request, 'Employee/EmployeeReg.html')
 
 
 def userRegister(request):
-    return render(request, 'userRegistration.html')
+    return render(request, 'User/userRegistration.html')
+
+
+def employeeLogin(request):
+    return render(request, 'Employee/EmployeeLogin.html')
+
+
+def userLogin(request):
+    return render(request, 'User/userLogin.html')
