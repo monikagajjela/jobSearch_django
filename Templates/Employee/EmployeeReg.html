@@ -9,19 +9,20 @@
             <h2 class="contact-title">Employee Registration Form</h2>
         </div>
         <div class="col-lg-8">
-            <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm"
-                novalidate="novalidate">
+            <form class="form-contact contact_form" action="employeeReg" method="post" id="contactForm"
+                novalidate="novalidate" enctype='multipart/form-data'>
+                {% csrf_token %}
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <input class="form-control valid" name="name" id="fname" type="text"
+                            <input class="form-control valid" name="name" id="cname" type="text"
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Company name'"
                                 placeholder="Enter Company name">
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            <input class="form-control" name="subject" id="email" type="email"
+                            <input class="form-control" name="cemail" id="cemail" type="email"
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address'"
                                 placeholder="Enter Email Address">
                         </div>
@@ -29,53 +30,52 @@
                     <div class="col-12">
                         <div class="input-group mb-3">
 
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name='ctype'>
                                 <option selected>Type ...</option>
-                                <option value="1">Networking</option>
-                                <option value="2">Testing</option>
-                                <option value="3">Software developer </option>
-                                <option value="3">Marketing </option>
-                                <option value="3">Finanace </option>
-                                <option value="3">Consulting & Careers </option>
-                                <option value="3">UI developer </option>
-                                <option value="3">IT developer </option>
+                                <option value="Networking">Networking</option>
+                                <option value="Testing">Testing</option>
+                                <option value="Software Development">Software Development </option>
+                                <option value="Marketing">Marketing </option>
+                                <option value="Finanace">Finanace </option>
+                                <option value="Consulting & Careers ">Consulting & Careers </option>
+                                <option value="Mobile Development">Mobile Development </option>
                             </select>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9"
-                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'"
-                                placeholder=" Enter Message"></textarea>
+                            <textarea class="form-control w-100" name="caddress" id="caddress" cols="30" rows="9"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Address'"
+                                placeholder=" Enter Address"></textarea>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input class="form-control valid" name="name" type="text" onfocus="this.placeholder = ''"
+                            <input class="form-control valid" name="ccity" type="text" onfocus="this.placeholder = ''"
                                 onblur="this.placeholder = 'City'" placeholder="City">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input class="form-control valid" name="lname" type="text" onfocus="this.placeholder = ''"
+                            <input class="form-control valid" name="state" type="text" onfocus="this.placeholder = ''"
                                 onblur="this.placeholder = 'State'" placeholder="State">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input class="form-control valid" name="name" type="text" onfocus="this.placeholder = ''"
+                            <input class="form-control valid" name="country" type="text" onfocus="this.placeholder = ''"
                                 onblur="this.placeholder = 'Country'" placeholder="Country">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input class="form-control valid" name="lname" type="text" onfocus="this.placeholder = ''"
+                            <input class="form-control valid" name="pincode" type="text" onfocus="this.placeholder = ''"
                                 onblur="this.placeholder = 'Pincode'" placeholder="Pincode">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <input class="form-control valid" name="Phone Number" onfocus="this.placeholder = ''"
+                            <input class="form-control valid" name="phone" onfocus="this.placeholder = ''"
                                 onblur="this.placeholder = 'Phone Number'" placeholder="Phone Number"
                                 pattern="[7-9]{1}[0-9]{9}" title="Phone number with 7-9 and remaing 9
                                   digit with 0-9">
@@ -86,14 +86,15 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon3">https://</span>
                             </div>
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                            <input type="url" class="form-control" name="curl" id="basic-url"
+                                aria-describedby="basic-addon3">
                         </div>
                     </div>
 
 
 
                 </div>
-            </form>
+
         </div>
         <div class="col-lg-4">
             <div class="col-12">
@@ -110,7 +111,7 @@
         <div class="col-12 text-center">
             <button type="submit" class="button button-contactForm boxed-btn">Register</button>
         </div>
-
+        </form>
     </div>
 </div>
 

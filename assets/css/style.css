@@ -3327,6 +3327,16 @@ hr {
   border-radius: 0px;
   height: 100% !important;
 }
+.login-form .form-control::placeholder {
+  font-weight: 300;
+  color: #999999;
+  font-size: 14px;
+}
+.login-form .login-box {
+  justify-content: center;
+  align-self: center;
+  height: auto;
+}
 .modal-message .modal-dialog {
   position: absolute;
   top: 36%;
@@ -6347,12 +6357,10 @@ textarea {
   padding: 15px;
   margin: 5px 0 0 0;
   display: inline-block;
-  border: none;
-  background: #f1f1f1;
 }
 input[type="text"]:focus,
 input[type="password"]:focus {
-  background-color: orange;
+  /* background-color: orange; */
   outline: none;
 }
 div {
@@ -6383,12 +6391,10 @@ textarea {
   padding: 15px;
   margin: 5px 0 0 0;
   display: inline-block;
-  border: none;
-  background: #f1f1f1;
 }
 input[type="text"]:focus,
 input[type="password"]:focus {
-  background-color: orange;
+  /* background-color: orange; */
   outline: none;
 }
 div {

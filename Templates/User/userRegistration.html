@@ -8,71 +8,78 @@
             <h2 class="contact-title">User Registration Form</h2>
         </div>
         <div class="col-lg-8">
-            <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm"
-                novalidate="novalidate">
+            <form class="form-contact contact_form" action="#" method="POST" enctype='multipart/form-data'>
+                {% csrf_token %}
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input class="form-control valid" name="name" id="fname" type="text"
+                            <input class="form-control valid" name="firstName" id="fname" type="text"
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter First name'"
                                 placeholder="Enter First name">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input class="form-control valid" name="lname" id="email" type="text"
+                            <input class="form-control valid" name="lastName" id="lname" type="text"
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter last Name'"
                                 placeholder="Enter last Name">
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            <input class="form-control" name="subject" id="email" type="email"
+                            <input class="form-control" name="username" id="username" type="text"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Username'"
+                                placeholder="Enter Username">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <input class="form-control" name="email" id="email" type="email"
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address'"
                                 placeholder="Enter Email Address">
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            <input class="form-control" type="password" placeholder="Enter Password" name="psw"
+                            <input class="form-control" type="password" placeholder="Enter Password" name="password"
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'"
                                 placeholder="Password">
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            <textarea class="form-control w-100" name="Address" id="message" cols="30" rows="4"
+                            <textarea class="form-control w-100" name="address" id="address" cols="30" rows="4"
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Address'"
                                 placeholder="Address"></textarea>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input class="form-control valid" name="name" type="text" onfocus="this.placeholder = ''"
+                            <input class="form-control valid" name="city" type="text" onfocus="this.placeholder = ''"
                                 onblur="this.placeholder = 'City'" placeholder="City">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input class="form-control valid" name="lname" type="text" onfocus="this.placeholder = ''"
+                            <input class="form-control valid" name="state" type="text" onfocus="this.placeholder = ''"
                                 onblur="this.placeholder = 'State'" placeholder="State">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input class="form-control valid" name="name" type="text" onfocus="this.placeholder = ''"
+                            <input class="form-control valid" name="country" type="text" onfocus="this.placeholder = ''"
                                 onblur="this.placeholder = 'Country'" placeholder="Country">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input class="form-control valid" name="lname" type="text" onfocus="this.placeholder = ''"
+                            <input class="form-control valid" name="pincode" type="text" onfocus="this.placeholder = ''"
                                 onblur="this.placeholder = 'Pincode'" placeholder="Pincode">
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <input class="form-control valid" name="Phone Number" onfocus="this.placeholder = ''"
+                            <input class="form-control valid" name="phone" onfocus="this.placeholder = ''"
                                 onblur="this.placeholder = 'Phone Number'" placeholder="Phone Number"
                                 pattern="[7-9]{1}[0-9]{9}" title="Phone number with 7-9 and remaing 9
                                   digit with 0-9">
@@ -89,7 +96,7 @@
                         </div>
                     </div>
                 </div>
-            </form>
+
         </div>
         <div class="col-lg-4">
             <div class="col-12">
@@ -106,7 +113,7 @@
         <div class="col-12 text-center">
             <button type="submit" class="button button-contactForm boxed-btn">Register</button>
         </div>
-
+        </form>
     </div>
 </div>
 
